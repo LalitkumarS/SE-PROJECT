@@ -1,0 +1,112 @@
+/* Dashboard.css - Dark Theme with Color Variants for Cards */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Deep gradient for a dark theme */
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.container {
+  background: #25283d;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2a2d4e;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Default card style */
+.card {
+  width: 20rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: #2b2c45; /* Default dark card background */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  border: 1px solid #3d3f58; /* Default border */
+}
+
+.card-variant-1 {
+  background: #3c3f61; /* Dark Blue */
+}
+
+.card-variant-2 {
+  background: #403c56; /* Dark Purple */
+}
+
+.card-variant-3 {
+  background: #3c464f; /* Dark Teal */
+}
+
+.card-variant-4 {
+  background: #3d3c4a; /* Dark Grayish Purple */
+}
+
+/* Apply different shadows and hover effects for variety */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.6), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover.card-variant-1 {
+  background-color: #4b4d6d; /* Slightly lighter shade for variant 1 */
+}
+
+.card:hover.card-variant-2 {
+  background-color: #504d75; /* Slightly lighter shade for variant 2 */
+}
+
+.card:hover.card-variant-3 {
+  background-color: #4d565e; /* Slightly lighter shade for variant 3 */
+}
+
+.card:hover.card-variant-4 {
+  background-color: #4e4d5b; /* Slightly lighter shade for variant 4 */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #ffffff; /* Light text color */
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #c9cbe0; /* Muted light text */
+}
+
+.card button {
+  background-color: #00c6ff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.card button:hover {
+  background-color: #00a3cc;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.6);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #00c6ff; /* Neon blue for title */
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 1rem;
+}

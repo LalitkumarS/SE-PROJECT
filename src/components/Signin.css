@@ -1,0 +1,188 @@
+/* Container for centering and background styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
+    overflow: hidden;
+    padding: 0 40px;
+    position: relative;
+  }
+  
+  /* Animated background gradient */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 128, 128, 0.5), rgba(255, 192, 203, 0.5)); /* Emerald Green to Rose Gold gradient */
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: 1;
+  }
+  
+  /* Abstract geometric pattern in Rose Gold */
+  .login-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill="none" stroke="%23ffc0cb" stroke-width="1"%3E%3Cpath d="M0 0h100v100H0z"/%3E%3Cpath d="M0 0l100 100M100 0l-100 100"/%3E%3Cpath d="M50 0v100M0 50h100"/%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.1;
+    z-index: 2;
+  }
+  
+  /* Adding glassmorphism effect with neumorphism */
+  .login-box {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 40px 30px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    animation: moveInUp 1s ease-out;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+    z-index: 3;
+  }
+  
+  /* Hover effect */
+  .login-box:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Form heading */
+  .login-box h2 {
+    color: #004d40; /* Emerald Green */
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Input fields */
+  .input-group {
+    margin-bottom: 20px;
+    width: 350px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 192, 203, 0.6); /* Rose Gold border */
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3), inset -2px -2px 4px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .input-group input:focus {
+    border-color: #004d40; /* Emerald Green */
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Buttons */
+  .sign-up-button {
+    background: linear-gradient(135deg, #004d40, #ffc0cb); /* Emerald Green to Rose Gold */
+    color: white;
+    padding: 12px 0;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sign-up-button:hover {
+    background: linear-gradient(135deg, #ffc0cb, #004d40); /* Rose Gold to Emerald Green */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sign-up-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffc0cb; /* Rose Gold underline */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sign-up-button:hover::before {
+    transform: translateY(0%);
+  }
+  
+  .login-button {
+    background: transparent;
+    color: #004d40; /* Emerald Green text */
+    margin-top: 20px;
+    padding: 12px 0;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Login button with Emerald Green color effects */
+  .login-button:hover {
+    color: #ffc0cb; /* Rose Gold text */
+    transform: scale(1.02);
+  }
+  
+  .login-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #004d40; /* Emerald Green underline */
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-button:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Animations */
+  @keyframes moveInUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

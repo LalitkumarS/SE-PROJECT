@@ -1,0 +1,23 @@
+[
+    {
+      "patientId": "P12345",
+      "patientName": "John Doe",
+      "dateOfBirth": "1980-01-01",
+      "age": 44,
+      "dateOfAdmission": "2023-05-15",
+      "roomNumber": "201A",
+      "causeOfDeath": "Heart Attack",
+      "dateOfDeath": "2023-09-12"
+    },
+    {
+      "patientId": "P67890",
+      "patientName": "Jane Smith",
+      "dateOfBirth": "1975-07-08",
+      "age": 49,
+      "dateOfAdmission": "2023-06-01",
+      "roomNumber": "305B",
+      "causeOfDeath": "Stroke",
+      "dateOfDeath": "2023-09-20"
+    }
+  ]
+  

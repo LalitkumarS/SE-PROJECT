@@ -1,0 +1,80 @@
+/* Register.css */
+.container {
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+
+  .container:hover {
+    transform: scale(1.02);
+  }
+  
+  h2 {
+    font-family: 'Arial', sans-serif;
+    color: #343a40;
+  }
+  
+  .form-group input {
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Limit the width of the text fields */
+  .form-control {
+  max-width: 400px; /* Adjust the max width as needed */
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out; /* Smooth animation */
+  }
+
+/* Add focus animation */
+  .form-control:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+  transform: scale(1.05); /* Slightly enlarge the input field */
+  }
+
+  .btn {
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  /* src/components/Register.css */
+
+  .custom-container {
+  max-width: 500px; /* Adjust the container width as needed */
+  margin: 0 auto; /* Center the container */
+  }
+
+  .btn-sm {
+  font-size: 0.8rem; /* Reduce button font size */
+  padding: 0.5rem 1rem; /* Adjust padding to reduce size */
+  }
+
+  
+  .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .container {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
